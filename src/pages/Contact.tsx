@@ -18,11 +18,11 @@ export const Contact = () => {
            <img src="/svgs/svgexport-24.svg" className=" absolute inset-0 mx-auto top-20   scale-[2.5]  -rotate-90"/>
           <div className=" flex items-center justify-between  w-full h-[70vh] container">
             <div className=" relative w-[340px] h-[267px] left-24   hidden lg:inline">
-                        <img className=" w-[161px] h-[306px] absolute -left-20 bottom-0" src="/public/svgs/contact/svgexport-7.svg" alt=""/>
-                        <img className="absolute w-[153px] h-[166px] -top-20 right-[168px]" src="/public/svgs/contact/svgexport-8.svg" alt=""/>
-                        <img className="absolute -bottom-4 -left-8" src="/public/svgs/contact/svgexport-6.svg" alt=""/>
-                        <img className=" animate-slideInOut size-[117px] absolute -top-28 right-4" src="/public/svgs/contact/svgexport-10.svg" alt=""/>
-                        <img className=" animate-shake origin-bottom-right w-[73px] h-[65px] absolute -top-20 -left-20" src="/public/svgs/contact/svgexport-9.svg" alt=""/>
+                        <img className=" w-[161px] h-[306px] absolute -left-20 bottom-0" src="/svgs/contact/svgexport-7.svg" alt=""/>
+                        <img className="absolute w-[153px] h-[166px] -top-20 right-[168px]" src="/svgs/contact/svgexport-8.svg" alt=""/>
+                        <img className="absolute -bottom-4 -left-8" src="/svgs/contact/svgexport-6.svg" alt=""/>
+                        <img className=" animate-slideInOut size-[117px] absolute -top-28 right-4" src="/svgs/contact/svgexport-10.svg" alt=""/>
+                        <img className=" animate-shake origin-bottom-right w-[73px] h-[65px] absolute -top-20 -left-20" src="/svgs/contact/svgexport-9.svg" alt=""/>
             </div>
           <aside className=" relative  ml-auto lg:ml-0 text-right flex flex-col gap-4 p-4 justify-center items-end max-w-[500px]">
             <span className=" bg-white/20 rounded p-1">
@@ -62,7 +62,7 @@ export const Contact = () => {
       <section className=" sm:px-24 py-16 flex flex-col justify-between container lg:flex-row-reverse">
         <div className=" relative lg:w-1/2  flex flex-col justify-evenly items-center">
           <motion.img  initial={{y:80,opacity:0}}  whileInView={{y:0,opacity:1}} transition={{duration:0.4,delay:0.3}} className=" will-change-[transform_opacity] w-60 aspect-[522/376] " src="https://4cards.store/html/hostie-rtl/assets/images/contact/contact-form.png" alt="" />
-          <img className=" hidden lg:block absolute left-0" src="/public/svgs/contact/svgexport-13.svg" alt="" />
+          <img className=" hidden lg:block absolute left-0" src="/svgs/contact/svgexport-13.svg" alt="" />
           <div className=" space-y-4 text-end">
             <h2 className=" text-3xl lg:text-8xl font-semibold">اطرح سؤالاً</h2>
             <p className=" text-xl">قم بجدولة مكالمة اليوم واحصل على مساعدة من أحد خبرائنا لمساعدتك في تحديد الخدمة المثلى لنشاطك التجاري وميزانيتك.</p>
