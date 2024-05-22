@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-#root,
 body {
-	height: 100svh;
+  height: 100vh;
 }

@@ -5,3 +5,7 @@ export * from "./NoContent";
 export * from "./ToggleBtn";
 export * from "./ErrorBoundary"
 export * from "./Image"
+export * from "./Modale"
+export * from "./ScrollToTopBtn"
+export * from "./Collapsible"
+export * from "./LoginBtn"

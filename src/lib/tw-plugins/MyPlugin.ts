@@ -4,11 +4,15 @@ export const MyPlugin = plugin(
   ({ addBase, addUtilities }) => {
     addBase({
       ":root": {
-        "--neutral": "226,232,240",
+        "--neutral": "255,255,255",
         "--neutral-revert": "30,41,59",
         "--neutral-hover": "63,63,70",
-        "--primary": "120,120,250",
-        "--primary-hover": "100,100,230",
+        "--primary": "7,116,255", // #0774FF 
+        "--primary-text": "255,255,255", // #fff
+        "--primary-hover": "3,58,167",// #033AA7 
+        "--secondery": "255,193,7",
+        "--secondery-text": "45,60,88",
+        "--secondery-hover": "100,100,230",
         "--alert": "200,50,50",
         "--alert-hover": "220,70,70",
         "--success": "110,231,183",//? emerald 300
@@ -36,7 +40,7 @@ export const MyPlugin = plugin(
       h4: { "@apply capitalize text-base": {} },
       p: { "@apply text-sm": {} },
       li: { "@apply list-none": {} },
-      a: { "@apply !text-current": {} },
+      // a: { "@apply !text-current": {} },
 
     });
     addUtilities({
@@ -71,8 +75,11 @@ export const MyPlugin = plugin(
           neutral: "rgb(var(--neutral),<alpha-value>)",
           "neutral-revert": "rgb(var(--neutral-revert),<alpha-value>)",
           primary: "rgb(var(--primary),<alpha-value>)",
+          "primary-text": "rgb(var(--primary-text),<alpha-value>)",
           "primary-hover": "rgb(var(--primary-hover),<alpha-value>)",
-          variant: "rgb(var(--variant,0,0,0),<alpha-value>)",
+          secondery: "rgb(var(--secondery),<alpha-value>)",
+          "secondery-text": "rgb(var(--secondery-text),<alpha-value>)",
+          "secondery-hover": "rgb(var(--secondery-hover),<alpha-value>)",
           alert: "rgb(var(--alert),<alpha-value>)",
           "alert-hover": "rgb(var(--alert-hover),<alpha-value>)",
           success: "rgb(var(--success),<alpha-value>)",
@@ -99,8 +106,24 @@ export const MyPlugin = plugin(
           fadeout:
             "fadeout var(--fadeout-duration,0.3s) forwards var(--fadeout-delay,0s)",
           buzz: "buzz 2s infinite linear  ",
+          shake: "shake 5s infinite linear  ",
           slideDown: "slideDown 0.3s forwards linear  ",
           slideUp: "slideUp 0.3s forwards linear  ",
+          slideIn: "slideIn 0.3s forwards linear  ",
+          slideOut: "slideOut 0.3s forwards linear  ",
+          slideInOut: "slideInOut 4s forwards linear  ",
+          scaleIn: 'scaleIn 200ms ease',
+          scaleOut: 'scaleOut 200ms ease',
+          fadeIn: 'fadeIn 200ms ease',
+          fadeOut: 'fadeOut 200ms ease',
+          enterFromLeft: 'enterFromLeft 250ms ease',
+          enterFromRight: 'enterFromRight 250ms ease',
+          exitToLeft: 'exitToLeft 250ms ease',
+          exitToRight: 'exitToRight 250ms ease',
+          slideUpAndFade: 'slideUpAndFade 0.5s cubic-bezier(0.16, 1, 0.3, 1)',
+          slideRightAndFade: 'slideRightAndFade 0.5s cubic-bezier(0.16, 1, 0.3, 1)',
+          slideDownAndFade: 'slideDownAndFade 0.5s cubic-bezier(0.16, 1, 0.3, 1)',
+          slideLeftAndFade: 'slideLeftAndFade 0.5s cubic-bezier(0.16, 1, 0.3, 1)',
         },
         keyframes: {
           reset: {
@@ -141,6 +164,26 @@ export const MyPlugin = plugin(
                 "rotate(12.5deg)",
             },
           },
+          shake: {
+            "0%,100%": {
+              transform:
+                "rotate(-12.5deg) ",
+            },
+            "50%": {
+              transform:
+                "rotate(12.5deg) ",
+            },
+          },
+          slideInOut: {
+            "0%,100%": {
+              transform:
+                "translate(-16px,0px) ",
+            },
+            "50%": {
+              transform:
+                "translate(16px,0px) ",
+            },
+          },
           slideDown: {
             from: {
               height: "0"
@@ -156,9 +199,74 @@ export const MyPlugin = plugin(
             to: {
               height: "0"
             }
-          }
+          },
+          slideOut: {
+            to: {
+              transform: "translate(100% , 0px);"
+            },
+            from: {
+              transform: "translate(0px , 0px);",
+            }
+          },
+          slideIn: {
+            from: {
+              transform: "translate(100% , 0px);"
+            },
+            to: {
+              transform: "translate(0px , 0px);",
+            }
+          },
+          enterFromRight: {
+            from: { opacity: '0', transform: 'translateX(200px)' },
+            to: { opacity: '1', transform: 'translateX(0)' },
+          },
+          enterFromLeft: {
+            from: { opacity: '0', transform: 'translateX(-200px)' },
+            to: { opacity: '1', transform: 'translateX(0)' },
+          },
+          exitToRight: {
+            from: { opacity: '1', transform: 'translateX(0)' },
+            to: { opacity: '0', transform: 'translateX(200px)' },
+          },
+          exitToLeft: {
+            from: { opacity: '1', transform: 'translateX(0)' },
+            to: { opacity: '0', transform: 'translateX(-200px)' },
+          },
+          scaleIn: {
+            from: { opacity: '0', transform: 'rotateX(-10deg) scale(0.9)' },
+            to: { opacity: '1', transform: 'rotateX(0deg) scale(1)' },
+          },
+          scaleOut: {
+            from: { opacity: '1', transform: 'rotateX(0deg) scale(1)' },
+            to: { opacity: '0', transform: 'rotateX(-10deg) scale(0.95)' },
+          },
+          fadeIn: {
+            from: { opacity: '0' },
+            to: { opacity: '1' },
+          },
+          fadeOut: {
+            from: { opacity: '1' },
+            to: { opacity: '0' },
+          },
+          slideUpAndFade: {
+            from: { opacity: '0', transform: 'translateY(20px)' },
+            to: { opacity: '1', transform: 'translateY(0)' },
+          },
+          slideRightAndFade: {
+            from: { opacity: '0', transform: 'translateX(-20px)' },
+            to: { opacity: '1', transform: 'translateX(0)' },
+          },
+          slideDownAndFade: {
+            from: { opacity: '0', transform: 'translateY(-20px)' },
+            to: { opacity: '1', transform: 'translateY(0)' },
+          },
+          slideLeftAndFade: {
+            from: { opacity: '0', transform: 'translateX(20px)' },
+            to: { opacity: '1', transform: 'translateX(0)' },
+          },
         },
       },
     },
+
   });
 export default MyPlugin;
