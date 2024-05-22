@@ -61,7 +61,7 @@ export const Contact = () => {
 
       <section className=" sm:px-24 py-16 flex flex-col justify-between container lg:flex-row-reverse">
         <div className=" relative lg:w-1/2  flex flex-col justify-evenly items-center">
-          <motion.img  initial={{y:80,opacity:0}}  whileInView={{y:0,opacity:1}} transition={{duration:0.4,delay:0.3}} className=" will-change-[transform_opacity] w-60 aspect-[522/376] " src="https://4cards.store/html/hostie-rtl/assets/images/contact/contact-form.png" alt="" />
+          <motion.img  initial={{y:80,opacity:0}}  whileInView={{y:0,opacity:1}} transition={{duration:0.4,delay:0.3}} className=" will-change-[transform_opacity] w-60 aspect-[522/376] " src="send-a-message.png" alt="" />
           <img className=" hidden lg:block absolute left-0" src="/svgs/contact/svgexport-13.svg" alt="" />
           <div className=" space-y-4 text-end">
             <h2 className=" text-3xl lg:text-8xl font-semibold">اطرح سؤالاً</h2>

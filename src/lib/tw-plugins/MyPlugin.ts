@@ -111,7 +111,7 @@ export const MyPlugin = plugin(
           slideUp: "slideUp 0.3s forwards linear  ",
           slideIn: "slideIn 0.3s forwards linear  ",
           slideOut: "slideOut 0.3s forwards linear  ",
-          slideInOut: "slideInOut 4s forwards linear  ",
+          slideInOut: "slideInOut 4s infinite linear  ",
           scaleIn: 'scaleIn 200ms ease',
           scaleOut: 'scaleOut 200ms ease',
           fadeIn: 'fadeIn 200ms ease',
@@ -177,11 +177,11 @@ export const MyPlugin = plugin(
           slideInOut: {
             "0%,100%": {
               transform:
-                "translate(-16px,0px) ",
+                "translateX(-16px) ",
             },
             "50%": {
               transform:
-                "translate(16px,0px) ",
+                "translateX(16px) ",
             },
           },
           slideDown: {

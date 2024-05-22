@@ -23,7 +23,7 @@ export const Signup = () => {
       exit={{ opacity: 0 }}
       className=" h-screen flex  justify-center">
       <section className=" w-full max-w-screen-sm sm:mb-10 flex flex-col justify-center items-center gap-8 p-8 bg-gray-50">
-       <img src="/public/svgs/Hostie-1.svg"/>
+       <img src="/svgs/Hostie-1.svg"/>
         <h1 className=" text-4xl font-semibold">إنشاء حساب</h1>
         <form onSubmit={handleSubmit(submitHandle, () => {
           toast({type: 'error', message: formState.errors.agreeToUseCondition?.message ?? "Please fill all field"})
